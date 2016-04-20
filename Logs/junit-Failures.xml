@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite package="otc-api" name="PUT Service Instances - Test Setup" tests="2" failures="0" errors="0">
+    <testcase name="#1 Authorization passed for mock user: idsb3t1@us.ibm.com"/>
+    <testcase name="#2 Authorization passed for mock user: idsb3t4@us.ibm.com"/>
+  </testsuite>
+  <testsuite package="otc-api" name="PUT Service Instances - PUT /api/v1/service_instances/:suid/" tests="6" failures="0" errors="0">
+    <testcase name="#3 Was the service instance creation successful?"/>
+    <testcase name="#4 Was the service instance modified successfully?"/>
+    <testcase name="#5 Does the service instance parameters data match?"/>
+    <testcase name="#6 Was get service instances call successful?"/>
+    <testcase name="#7 Has service instance status not changed?"/>
+    <testcase name="#8 Was the service_instance deleted correctly?"/>
+  </testsuite>
+  <testsuite package="otc-api" name="PUT Service Instances - PUT /api/v1/service_instances/:suid/ for a service instance that's bound" tests="9" failures="3" errors="0">
+    <testcase name="#9 Was the toolchain created successfully?">
+      <failure>
+          ---
+            operator: ok
+            expected: true
+            actual: undefined
+            at: utils.postAllTestToolchains.then.then.service_instance_id (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/tests/serviceInstancesPutTest.js:307:11)
+          ...
+      </failure>
+    </testcase>
+    <testcase name="#10 Was the service instance creation successful?"/>
+    <testcase name="#11 Was the service instance bound successfully?">
+      <failure>
+          ---
+            operator: equal
+            expected: 204
+            actual: 404
+            at: utils.postAllTestToolchains.then.then.then.then.utils.getRequest.header (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/tests/serviceInstancesPutTest.js:317:11)
+          ...
+      </failure>
+    </testcase>
+    <testcase name="#12 Was the service instance modified successfully?"/>
+    <testcase name="#13 Does the service instance parameters data match?"/>
+    <testcase name="#14 Was get service instances call successful?"/>
+    <testcase name="#15 Has service instance status not changed?"/>
+    <testcase name="#16 Was the service_instance deleted correctly?"/>
+    <testcase name="#17 Was the toolchain deleted correctly?">
+      <failure>
+          ---
+            operator: equal
+            expected: 204
+            actual: 400
+            at: _fulfilled (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/node_modules/q/q.js:834:54)
+          ...
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite package="otc-api" name="PUT Service Instances - PUT /api/v1/service_instances/:suid/" tests="6" failures="0" errors="0">
+    <testcase name="#18 Was the service instance creation successful?"/>
+    <testcase name="#19 Was the service instance modified successfully?"/>
+    <testcase name="#20 Does the service instance parameters data match?"/>
+    <testcase name="#21 Was get service instances call successful?"/>
+    <testcase name="#22 Has service instance status not changed?"/>
+    <testcase name="#23 Was the service_instance deleted correctly?"/>
+  </testsuite>
+  <testsuite package="otc-api" name="PUT Service Instances - PUT /api/v1/service_instances/:suid/ - Invalid service instance ID" tests="1" failures="0" errors="0">
+    <testcase name="#24 Was the service instance not found?"/>
+  </testsuite>
+  <testsuite package="otc-api" name="PUT Service Instances - PUT /api/v1/service_instances/:suid/ - Bad parameters" tests="7" failures="0" errors="0">
+    <testcase name="#25 Was the service instance creation successful?"/>
+    <testcase name="#26 Was the service instance update rejected for a service_id mismatch?"/>
+    <testcase name="#27 Was the service instance update rejected for an organization_guid mismatch?"/>
+    <testcase name="#28 Was the request rejected for missing service_id in the body?"/>
+    <testcase name="#29 Was the request rejected for missing organization_guid in the body?"/>
+    <testcase name="#30 Was the update rejected for a String parameters value?"/>
+    <testcase name="#31 Was the service_instance deleted correctly?"/>
+  </testsuite>
+  <testsuite package="otc-api" name="PUT Service Instances - PUT /api/v1/service_instances/:suid/" tests="3" failures="0" errors="0">
+    <testcase name="#32 Was the service instance creation successful?"/>
+    <testcase name="#33 Was the update rejected for user being not member of the org that the service instance is in?"/>
+    <testcase name="#34 Was the service_instance deleted correctly?"/>
+  </testsuite>
+  <testsuite package="otc-api" name="PUT Multiple Service Instances - PUT /api/v1/service_instances/:suid/" tests="8" failures="4" errors="0">
+    <testcase name="#35 Was the toolchain creation Successful?">
+      <failure>
+          ---
+            operator: equal
+            expected: randallX
+            actual: undefined
+            at: utils.postAllTestToolchains.then.then.service_instance_id (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/tests/serviceInstancesPutTest.js:567:11)
+          ...
+      </failure>
+    </testcase>
+    <testcase name="#36 Was the first service instance creation successful?"/>
+    <testcase name="#37 Was the second service instance creation successful?"/>
+    <testcase name="#38 Was the first service instance bound successfully to the toolchain?">
+      <failure>
+          ---
+            operator: equal
+            expected: 204
+            actual: 404
+            at: utils.postAllTestToolchains.then.then.then.then.then.then.then.utils.putRequest.header (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/tests/serviceInstancesPutTest.js:593:11)
+          ...
+      </failure>
+    </testcase>
+    <testcase name="#39 Was the second service instance bound successfully to the toolchain?">
+      <failure>
+          ---
+            operator: equal
+            expected: 204
+            actual: 404
+            at: utils.postAllTestToolchains.then.then.then.then.then.then.then.then.then.utils.deleteRequest.header (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/tests/serviceInstancesPutTest.js:601:11)
+          ...
+      </failure>
+    </testcase>
+    <testcase name="#40 Was the first service instance deleted successfully?"/>
+    <testcase name="#41 Was the second service instance deleted successfully?"/>
+    <testcase name="#42 Was the toolchain deleted properly?">
+      <failure>
+          ---
+            operator: equal
+            expected: 204
+            actual: 400
+            at: _fulfilled (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/node_modules/q/q.js:834:54)
+          ...
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

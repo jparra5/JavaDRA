@@ -1,0 +1,46 @@
+<testsuite name="Mocha Tests" tests="34" failures="1" errors="0" skipped="7" timestamp="Tue, 01 Dec 2015 13:41:42 GMT" time="41.607">
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user" time="6.058"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with project id missing"><skipped/></testcase>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with capability id missing" time="0.095"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with capability data missing" time="0.11"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with incorrect sauce api key" time="0.975"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with incorrect sauce username" time="0.953"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with invalid Bluemix auth token[No Bearer keyword at the start, rest of the token valid]"><skipped/></testcase>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with invalid Bluemix auth token[Bearer at the start but rest of the token is NOT valid]" time="0.068"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with invalid Bluemix auth token[No Bearer keyword at the start AND also rest of the token is NOT valid]" time="0.034"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by Admin user with an extra FROM header that is not required and processed by the server" time="0.859"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by non Admin member user[an authorized bluemix user who is member of the project but not Admin]" time="1.839"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Add Sauce Labs capability by non member user[an authorized bluemix user who is not member of the project]" time="1.919"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Delete Sauce Labs capability by Admin user with invalid Bluemix auth token[No Bearer keyword at the start, rest of the token valid]"><skipped/></testcase>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Delete Sauce Labs capability by Admin user with invalid Bluemix auth token[Bearer at the start but rest of the token is NOT valid]" time="0.06"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Delete Sauce Labs capability by Admin user with invalid Bluemix auth token[No Bearer keyword at the start AND also rest of the token is NOT valid]" time="0.037"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Delete Sauce Labs capability by non Admin member user[an authorized bluemix user who is member of the project but not Admin]" time="0.397"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Delete Sauce Labs capability by non member user[an authorized bluemix user who is not member of the project]" time="0.499"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Delete Sauce Labs capability by Admin user with an extra FROM header that is not required and processed by the server" time="0.451"/>
+<testcase classname="G-Broke Provisioning Sauce Capability Functional Verification Tests" name="Delete Sauce Labs capability by Admin useremove Sauce capability" time="0.637"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="Init Slack capability correctly" time="8.764"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="remove Slack capability correctly" time="1.174"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to init a slack capability because of no headers" time="0.034"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to incorrect value after bearer" time="0.063"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to no bearer in header and incorrect token" time="0.034"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to token correct but no Bearer in the header"><skipped/></testcase>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to incorrect credentials for auth-token" time="0.565">
+  <failure>
+      ---
+        operator: equal
+        expected: 204
+        actual: 404
+        at: utils.postAllTestToolchains.then.then.then.then.then.then.then.then.then.utils.deleteRequest.header (/home/pipeline/477229d7-5c17-48e7-8d82-f051fa08b161/tests/serviceInstancesPutTest.js:601:11)
+      ...
+  </failure>
+</testcase>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="Init slack capability with correct token in the header but with extra header values in addition to authorization" time="9.331"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to remove slack capability due to incorrect token in the header" time="0.065"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="Delete slack capability with correct token in the header but with extra header values in addition to authorization" time="0.85"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to missing project_id"><skipped/></testcase>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to missing parameter capability_id" time="0.082"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to missing parameter capability_data" time="0.961"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to add Slack capability due to provider not member of project" time="0.463"/>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to remove Slack capability due to the  provider is not a member of project"><skipped/></testcase>
+<testcase classname="G-Broke Provisioning Slack Capability Functional Verification Tests" name="should fail to remove Slack capability due to incorrect Project ID in the URL (with correct  in the header)"><skipped/></testcase>
+</testsuite>
